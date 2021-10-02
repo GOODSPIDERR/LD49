@@ -3,7 +3,10 @@ guid: a7b201644a014c4408a3fdd427e8d70f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - characterMovement: {fileID: 7837154946537704034, guid: 0c69de082027a4447b779081f8e42c28, type: 3}
+  - character: {fileID: 7837154946537704035, guid: 0c69de082027a4447b779081f8e42c28, type: 3}
+  - ballOfMagnet: {fileID: 4975576088931841321, guid: 600569ac330ab8f4287a50bb14badf82, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

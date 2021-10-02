@@ -10,6 +10,7 @@ TagManager:
   - Cursor
   - FxTemporaire
   - Prop
+  - Bat
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Magnet
   - Player
   - Prop
-  - 
+  - Enemy
   - 
   - 
   - 

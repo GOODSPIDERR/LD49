@@ -9,12 +9,11 @@ public class MagnetMoment : MonoBehaviour
     RaycastHit hit;
     Rigidbody hatMagnet, rb;
     public CharacterMovement characterMovement;
-    public Transform pole;
     public GameObject character;
     Vector3 initialPosition;
     Quaternion initialRotation;
     public GameObject ballOfMagnet;
-    bool magnetised;
+    public bool magnetised;
     void Start()
     {
         hatMagnet = GameObject.FindGameObjectWithTag("Hat").GetComponent<Rigidbody>();
