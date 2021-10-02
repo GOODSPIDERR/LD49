@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -36,8 +37,13 @@ public class CharacterMovement : MonoBehaviour
         rb.transform.Translate(movementVector.x * movementSpeed * Time.deltaTime, 0, 0);
     }
 
-    void Jump()
+    public void Jump()
     {
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+    }
+
+    public void BackToNormal()
+    {
+        transform.DORotate(new Vector3(0, 0, 0), 0.1f);
     }
 }
