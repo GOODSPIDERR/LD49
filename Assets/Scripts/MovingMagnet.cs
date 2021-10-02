@@ -9,8 +9,8 @@ public class MovingMagnet : MonoBehaviour
     RaycastHit hit;
 
     private GameObject platform;
-    private float startPositionX = -0.25f;
-    private float endPositionX = 0.25f;
+    [SerializeField] float startPosition; //for horizontal movement this value is -0.25f, for vertical it is 0.5f
+    [SerializeField] float endPosition;  //for horizontal movement this value is 0.25f, for vertical, it is -0.5f
     float duration = 4f;
 
     void Start()
@@ -35,11 +35,11 @@ public class MovingMagnet : MonoBehaviour
 
     public void Move()
     {
-        platform.transform.DOLocalMoveX(endPositionX, duration, false);
+        platform.transform.DOLocalMoveX(endPosition, duration, false);
     }
     public void GoBack()
     {
-        platform.transform.DOLocalMoveX(startPositionX, duration, false);
+        platform.transform.DOLocalMoveX(startPosition, duration, false);
     }
 
 }
