@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 473021536}
   - component: {fileID: 473021535}
   - component: {fileID: 473021538}
+  - component: {fileID: 473021539}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -440,7 +441,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -716.99994, y: -57}
+  m_AnchoredPosition: {x: -717, y: -70}
   m_SizeDelta: {x: 350, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &473021535
@@ -545,7 +546,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473021533}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -558,6 +559,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &473021539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473021533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0eb425c8b1c2234691729d635de9f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPosition: {x: -717, y: -70}
+  endPosition: {x: -1063, y: -408}
 --- !u!1 &716769498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,7 +1450,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -716.99994, y: 105}
+  m_AnchoredPosition: {x: -717, y: 105}
   m_SizeDelta: {x: 350, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497093368
@@ -1556,6 +1571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0eb425c8b1c2234691729d635de9f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {x: -717, y: 105}
+  endPosition: {x: -1074, y: 104}
 --- !u!50 &1497093372
 Rigidbody2D:
   serializedVersion: 4
@@ -1564,7 +1581,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497093366}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1681,7 +1698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -716.99994, y: 284}
+  m_AnchoredPosition: {x: -717, y: 284}
   m_SizeDelta: {x: 350, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!50 &1719236981
@@ -1692,7 +1709,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1719236979}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1717,6 +1734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0eb425c8b1c2234691729d635de9f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startPosition: {x: -717, y: 284}
+  endPosition: {x: -419, y: 504}
 --- !u!114 &1719236983
 MonoBehaviour:
   m_ObjectHideFlags: 0
