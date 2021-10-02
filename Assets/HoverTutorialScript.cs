@@ -12,14 +12,15 @@ public class HoverTutorialScript : MonoBehaviour, IPointerEnterHandler, IPointer
 
     void Start()
     {
-
+        Cursor.lockState = CursorLockMode.None;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit) && hit.collider.tag == "Magnet")
         {
             tutorialUI.SetActive(true);
         }
@@ -33,14 +34,14 @@ public class HoverTutorialScript : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         mouse_over = true;
         Debug.Log("Mouse enter");
-        tutorialUI.SetActive(true);
+        //tutorialUI.SetActive(true);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         mouse_over = false;
         Debug.Log("Mouse exit");
-        tutorialUI.SetActive(false);
+        //tutorialUI.SetActive(false);
         
     }
 }
