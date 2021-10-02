@@ -31,6 +31,14 @@ public class MagneticBall : MonoBehaviour
             isBeingDestroyed = true;
             transform.DOScale(new Vector3(0.001f, 0.001f, 0.001f), 0.2f).OnComplete(() => Destroy(gameObject, 3));
         }
+        /*
+                if (Input.GetKeyDown(KeyCode.Space) && !isBeingDestroyed)
+                {
+                    isBeingDestroyed = true;
+                    transform.DOScale(new Vector3(0.001f, 0.001f, 0.001f), 0.2f).OnComplete(() => Destroy(gameObject, 3));
+                    characterMovement.Jump();
+                }
+                */
     }
 
 }

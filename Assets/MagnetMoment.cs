@@ -34,7 +34,7 @@ public class MagnetMoment : MonoBehaviour
                 ball.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             }
 
-            if (Input.GetMouseButtonDown(0) && hit.collider.tag == "Magnet")
+            if (Input.GetMouseButtonDown(0) && hit.transform == transform)
             {
                 magnetised = true;
             }

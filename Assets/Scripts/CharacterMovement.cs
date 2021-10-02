@@ -37,6 +37,8 @@ public class CharacterMovement : MonoBehaviour
             rb.isKinematic = true;
             rb.useGravity = false;
             capsuleCollider.enabled = false;
+            transform.localPosition = new Vector3(0, -1.883263f, 0);
+            transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
         else
         {
@@ -47,13 +49,16 @@ public class CharacterMovement : MonoBehaviour
             rb.useGravity = true;
             capsuleCollider.enabled = true;
             BackToNormal();
+            headMagnet.transform.localPosition = new Vector3(0, 1.5f, 0);
+            headMagnet.transform.localRotation = Quaternion.Euler(0, 0, 0);
+
         }
 
         Vector2 movementVector = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
 
         if (canMove) Move(movementVector);
 
-        isGrounded = Physics.CheckSphere(groundCheck.position, 0.1f, groundLayer);
+        isGrounded = Physics.CheckSphere(groundCheck.position, 0.25f, groundLayer);
 
         Debug.Log(magnetised);
 

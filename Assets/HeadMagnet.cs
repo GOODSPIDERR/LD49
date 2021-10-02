@@ -30,11 +30,8 @@ public class HeadMagnet : MonoBehaviour
 
             Debug.Log(magnetDistance);
         }
-        else
-        {
-            //transform.localPosition = initialPosition;
-            //transform.localRotation = initialRotation;
-        }
+
+
     }
 
     private void OnTriggerEnter(Collider other)
