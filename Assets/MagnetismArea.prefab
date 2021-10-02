@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4975576088931841323}
   - component: {fileID: 4975576088931841322}
   m_Layer: 8
-  m_Name: Sphere
+  m_Name: MagnetismArea
   m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,7 +91,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4975576088931841321}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -108,6 +108,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb0571efffb803841a4b03b5c96c5220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hatMagnet: {fileID: 4815962627504680329, guid: 19dc91a76f75b5f42b5c1f7efe46733b, type: 3}
-  characterMovement: {fileID: 1631122876751594665, guid: 0c69de082027a4447b779081f8e42c28, type: 3}
-  character: {fileID: 1631122876751594664, guid: 0c69de082027a4447b779081f8e42c28, type: 3}

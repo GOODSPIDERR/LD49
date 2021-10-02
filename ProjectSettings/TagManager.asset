@@ -8,6 +8,7 @@ TagManager:
   - Hat
   - Ball
   - Cursor
+  - FxTemporaire
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Ground
   - Hat
   - Ball
-  - 
-  - 
+  - Magnet
+  - Player
   - 
   - 
   - 
