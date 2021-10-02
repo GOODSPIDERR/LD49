@@ -18,11 +18,13 @@ public class CharacterMovement : MonoBehaviour
     public GameObject headMagnet;
     float movementTranslation = 0f;
     public BoxCollider boxColliderOnMagnet;
+    CapsuleCollider capsuleCollider;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        capsuleCollider = GetComponent<CapsuleCollider>();
     }
 
     void Update()
@@ -34,6 +36,7 @@ public class CharacterMovement : MonoBehaviour
             transform.SetParent(headMagnet.transform);
             rb.isKinematic = true;
             rb.useGravity = false;
+            capsuleCollider.enabled = false;
         }
         else
         {
@@ -42,6 +45,7 @@ public class CharacterMovement : MonoBehaviour
             headMagnet.transform.SetParent(transform);
             rb.isKinematic = false;
             rb.useGravity = true;
+            capsuleCollider.enabled = true;
             BackToNormal();
         }
 

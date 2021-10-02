@@ -14,6 +14,7 @@ public class MagnetMoment : MonoBehaviour
     Vector3 initialPosition;
     Quaternion initialRotation;
     public GameObject ballOfMagnet;
+    bool magnetised;
     void Start()
     {
         hatMagnet = GameObject.FindGameObjectWithTag("Hat").GetComponent<Rigidbody>();
@@ -30,9 +31,24 @@ public class MagnetMoment : MonoBehaviour
             if (Input.GetMouseButtonDown(1) && hit.collider.tag == "Magnet")
             {
                 var ball = Instantiate(ballOfMagnet, hit.transform);
-                ball.transform.SetParent(null);
                 ball.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
             }
+
+            if (Input.GetMouseButtonDown(0) && hit.collider.tag == "Magnet")
+            {
+                magnetised = true;
+            }
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            magnetised = false;
+        }
+
+        if (magnetised)
+        {
+            Vector3 distance = hatMagnet.transform.position - transform.position;
+            rb.AddForce(distance * 100f * Time.deltaTime);
         }
     }
 }

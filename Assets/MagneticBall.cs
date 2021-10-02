@@ -23,7 +23,7 @@ public class MagneticBall : MonoBehaviour
         {
             Vector3 distance = transform.position - invisibleCursor.position;
             float newScale = Mathf.Clamp(distance.magnitude, 0.01f, 10f);
-            transform.localScale = new Vector3(newScale, newScale, newScale);
+            transform.localScale = new Vector3(newScale, newScale, 0.1f);
         }
 
         if (Input.GetMouseButtonUp(1))
