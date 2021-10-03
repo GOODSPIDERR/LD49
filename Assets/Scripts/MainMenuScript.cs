@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuScript : MonoBehaviour
 {
+    public Texture2D cursorTexture;
+    public CursorMode cursorMode = CursorMode.Auto;
+    public Vector2 hotSpot = Vector2.zero;
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.SetCursor(cursorTexture, hotSpot, cursorMode);
     }
     public void StartGame() //Loads the next scene in the index
     {
