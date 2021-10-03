@@ -551,7 +551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5168154941887526571}
   m_LocalRotation: {x: -0.007575219, y: 0, z: -0, w: 0.99997133}
-  m_LocalPosition: {x: -0, y: -2.0886497, z: 0.03454302}
+  m_LocalPosition: {x: -0, y: -2.12, z: 0.03}
   m_LocalScale: {x: 1, y: 1.0000002, z: 1.0000002}
   m_Children: []
   m_Father: {fileID: 198285275611990600}
@@ -617,8 +617,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 3.7057488, z: 0.87347674}
-  m_Center: {x: 0, y: 2.1683066, z: -0.005876481}
+  m_Size: {x: 1.1776085, y: 3.7105303, z: 0.87347674}
+  m_Center: {x: 0, y: 2.165916, z: -0.005876481}
 --- !u!114 &7252752219146957394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +641,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5168154941887526571}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
@@ -709,9 +709,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7837154946537704035}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.72, y: -1.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 7837154946659205246}
   - {fileID: 7837154948098415152}
@@ -736,9 +736,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.8479033
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1.4120641, z: 0}
 --- !u!54 &7837154946537704045
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -781,8 +781,9 @@ MonoBehaviour:
   jumpForce: 6
   graphics: {fileID: 7837154946568531622}
   magnetised: 0
-  headMagnet: {fileID: 7837154948098415153}
-  boxColliderOnMagnet: {fileID: 7837154948098415164}
+  headMagnet: {fileID: 5168154941887526571}
+  boxColliderOnMagnet: {fileID: 5582748836552661465}
+  head: {fileID: 198285275611990600}
 --- !u!95 &6852754960156536177
 Animator:
   serializedVersion: 3
@@ -856,7 +857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7837154946659205247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7837154946537704041}
