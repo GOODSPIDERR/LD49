@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class MagnetMoment : MonoBehaviour
 {
@@ -18,8 +19,8 @@ public class MagnetMoment : MonoBehaviour
     {
         hatMagnet = GameObject.FindGameObjectWithTag("Hat").GetComponent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
-        initialPosition = hatMagnet.transform.localPosition;
-        initialRotation = hatMagnet.transform.localRotation;
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
     }
 
     void Update()
@@ -46,8 +47,18 @@ public class MagnetMoment : MonoBehaviour
 
         if (magnetised)
         {
-            Vector3 distance = hatMagnet.transform.position - transform.position;
-            rb.AddForce(distance * 100f * Time.deltaTime);
+            if (rb.isKinematic)
+            {
+                magnetised = false;
+                transform.position = initialPosition;
+                transform.DOShakePosition(1f, 0.1f, 10, 90f, false, true).OnComplete(() => transform.DOMove(initialPosition, 0.5f, false));
+            }
+            else
+            {
+                Vector3 distance = hatMagnet.transform.position - transform.position;
+                rb.AddForce(distance * 100f * Time.deltaTime);
+            }
+
         }
     }
 }
