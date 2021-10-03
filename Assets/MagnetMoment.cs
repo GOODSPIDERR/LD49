@@ -15,6 +15,7 @@ public class MagnetMoment : MonoBehaviour
     Quaternion initialRotation;
     public GameObject ballOfMagnet;
     public bool magnetised;
+    public bool lever;
     void Start()
     {
         hatMagnet = GameObject.FindGameObjectWithTag("Hat").GetComponent<Rigidbody>();
@@ -45,7 +46,7 @@ public class MagnetMoment : MonoBehaviour
             magnetised = false;
         }
 
-        if (magnetised)
+        if (magnetised && !lever)
         {
             if (rb.isKinematic)
             {

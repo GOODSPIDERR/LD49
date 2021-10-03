@@ -18,7 +18,7 @@ public class ScriptedMagnet : MonoBehaviour
 
     void Update()
     {
-        if (magnetMoment.magnetised)
+        if (magnetMoment.magnetised && magnetMoment.lever)
         {
             transform.DOMove(leftPosition, 1f).OnComplete(() => state = 1);
         }
