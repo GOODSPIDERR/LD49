@@ -736,9 +736,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2.8479033
+  m_Height: 4.051668
   m_Direction: 1
-  m_Center: {x: 0, y: 1.4120641, z: 0}
+  m_Center: {x: 0, y: 2.0139465, z: 0}
 --- !u!54 &7837154946537704045
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -768,6 +768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canMove: 1
+  doubleJumped: 0
   movementSpeed: 5
   acceleration: 20
   groundCheck: {fileID: 7837154946659205246}
@@ -778,7 +779,7 @@ MonoBehaviour:
   magnetLayer:
     serializedVersion: 2
     m_Bits: 512
-  jumpForce: 10
+  jumpForce: 5
   graphics: {fileID: 7837154946568531622}
   magnetised: 0
   headMagnet: {fileID: 5168154941887526571}

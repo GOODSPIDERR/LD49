@@ -22,7 +22,7 @@ public class MovingMagnet : MonoBehaviour
         ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit))
         {
-            if (Input.GetMouseButtonDown(0) && hit.collider.tag == "Magnet")
+            if (Input.GetMouseButtonDown(0) && hit.transform == transform)
             {
                 Move();
             }
