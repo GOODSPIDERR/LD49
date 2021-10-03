@@ -19,12 +19,20 @@ public class CharacterMovement : MonoBehaviour
     float movementTranslation = 0f;
     public BoxCollider boxColliderOnMagnet;
     CapsuleCollider capsuleCollider;
+    Animator animator;
+    Vector3 initialPosition, initialHatPosition;
+    Quaternion initialRotation, initialHatRotation;
+    public Transform head;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         capsuleCollider = GetComponent<CapsuleCollider>();
+        animator = GetComponent<Animator>();
+
+        initialHatPosition = headMagnet.transform.localPosition;
+        initialHatRotation = headMagnet.transform.localRotation;
     }
 
     void Update()
@@ -37,20 +45,20 @@ public class CharacterMovement : MonoBehaviour
             rb.isKinematic = true;
             rb.useGravity = false;
             capsuleCollider.enabled = false;
-            transform.localPosition = new Vector3(0, -1.883263f, 0);
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            transform.localPosition = new Vector3(0, 0, 0);
+            transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
         else
         {
             canMove = true;
             transform.SetParent(null);
-            headMagnet.transform.SetParent(transform);
+            headMagnet.transform.SetParent(head);
             rb.isKinematic = false;
             rb.useGravity = true;
             capsuleCollider.enabled = true;
-            BackToNormal();
-            headMagnet.transform.localPosition = new Vector3(0, 1.5f, 0);
-            headMagnet.transform.localRotation = Quaternion.Euler(0, 0, 0);
+            //BackToNormal();
+            headMagnet.transform.localPosition = initialHatPosition;
+            headMagnet.transform.localRotation = initialHatRotation;
 
         }
 
@@ -64,6 +72,12 @@ public class CharacterMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded && canMove) Jump();
 
+        animator.SetBool("Magnetised", magnetised);
+
+        animator.SetBool("IsGrounded", isGrounded);
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
+
     }
     void Move(Vector2 movementVector)
     {
@@ -72,12 +86,18 @@ public class CharacterMovement : MonoBehaviour
 
         //if (movementVector.x == 0) DOTween.To(() => movementTranslation, x => movementTranslation = x, new Vector2(0, 0), 1);
 
-        rb.transform.Translate(movementVector.x * movementSpeed * Time.deltaTime, 0, 0);
+        rb.velocity = new Vector3(movementVector.x * movementSpeed, rb.velocity.y, 0);
+        animator.SetFloat("Speed", Mathf.Abs(movementVector.x));
+        //transform.rotation = Quaternion.LookRotation(movementVector);
+
+        if (movementVector.x > 0) transform.rotation = Quaternion.Euler(0, 90f, 0);
+        else if (movementVector.x < 0) transform.rotation = Quaternion.Euler(0, -90f, 0);
     }
 
     public void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+        animator.SetTrigger("Jump");
     }
 
     public void BackToNormal()
