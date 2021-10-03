@@ -24,11 +24,11 @@ public class HeadMagnet : MonoBehaviour
         {
             Vector3 magnetDifference = targetMagnet.position - transform.position;
             float magnetDistance = Vector3.Distance(targetMagnet.position, transform.position);
-            rb.AddForce(magnetDifference * 10000 / magnetDistance * Time.deltaTime);
+            //rb.AddForce(magnetDifference * 10000 / magnetDistance * Time.deltaTime);
 
-            rb.AddForce(Input.GetAxis("Horizontal") * 100 * Time.deltaTime, 0f, 0f);
+            //rb.AddForce(Input.GetAxis("Horizontal") * 100 * Time.deltaTime, 0f, 0f);
 
-            Debug.Log(magnetDistance);
+            //Debug.Log(magnetDistance);
         }
 
 
@@ -41,8 +41,9 @@ public class HeadMagnet : MonoBehaviour
             characterMovement.magnetised = true;
             magnetised = true;
             targetMagnet = other.transform;
-            rb.isKinematic = false;
-            rb.useGravity = true;
+            characterMovement.otherMagnet = other.transform;
+            //rb.isKinematic = false;
+            //rb.useGravity = true;
 
         }
     }
@@ -53,8 +54,8 @@ public class HeadMagnet : MonoBehaviour
         {
             characterMovement.magnetised = false;
             magnetised = false;
-            rb.isKinematic = true;
-            rb.useGravity = false;
+            //rb.isKinematic = true;
+            //rb.useGravity = false;
             //Recovery();
         }
     }
