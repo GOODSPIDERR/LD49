@@ -584,7 +584,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 5f0b13e8468158d419c4df0bfa542f2c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -778,12 +778,13 @@ MonoBehaviour:
   magnetLayer:
     serializedVersion: 2
     m_Bits: 512
-  jumpForce: 6
+  jumpForce: 10
   graphics: {fileID: 7837154946568531622}
   magnetised: 0
   headMagnet: {fileID: 5168154941887526571}
   boxColliderOnMagnet: {fileID: 5582748836552661465}
   head: {fileID: 198285275611990600}
+  otherMagnet: {fileID: 0}
 --- !u!95 &6852754960156536177
 Animator:
   serializedVersion: 3
@@ -1256,7 +1257,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4bf700802f3e068449d36be4efe8c6cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

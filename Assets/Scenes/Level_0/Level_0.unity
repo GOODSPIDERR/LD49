@@ -134,11 +134,11 @@ GameObject:
   - component: {fileID: 22778084}
   - component: {fileID: 22778087}
   - component: {fileID: 22778086}
-  - component: {fileID: 22778085}
   - component: {fileID: 22778088}
   - component: {fileID: 22778089}
   - component: {fileID: 22778090}
   - component: {fileID: 22778091}
+  - component: {fileID: 22778085}
   m_Layer: 0
   m_Name: Magnet
   m_TagString: Magnet
@@ -154,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22778083}
   m_LocalRotation: {x: -0, y: -0, z: 0.19628647, w: 0.98054665}
-  m_LocalPosition: {x: 10.046573, y: 9.184143, z: 0}
+  m_LocalPosition: {x: 11.1, y: 9.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1399642369}
@@ -174,7 +174,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2.33916, y: 0.39523402, z: 0.39523402}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &22778086
 MeshRenderer:
@@ -195,7 +195,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1edb570f182deed4f9482a53141ba92a, type: 2}
+  - {fileID: 2100000, guid: e026142d41fb7724c951b950f93767c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -224,7 +224,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22778083}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -5495902117074765545, guid: 91b8f35a0233ffc428317ba7e37f02e8, type: 3}
 --- !u!114 &22778088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,10 +653,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7837154946537704034, guid: 0c69de082027a4447b779081f8e42c28, type: 3}
-      propertyPath: jumpForce
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 7837154946537704035, guid: 0c69de082027a4447b779081f8e42c28, type: 3}
       propertyPath: m_Name
       value: Character
@@ -703,10 +699,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7837154946537704041, guid: 0c69de082027a4447b779081f8e42c28, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7837154948098415153, guid: 0c69de082027a4447b779081f8e42c28, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -134,9 +134,9 @@ GameObject:
   - component: {fileID: 22778084}
   - component: {fileID: 22778087}
   - component: {fileID: 22778086}
-  - component: {fileID: 22778085}
   - component: {fileID: 22778088}
   - component: {fileID: 22778089}
+  - component: {fileID: 22778085}
   m_Layer: 6
   m_Name: Magnet
   m_TagString: Magnet
@@ -152,11 +152,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22778083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.496, y: -0.66, z: -0.02}
-  m_LocalScale: {x: 0.14, y: 0.63, z: 0.3}
+  m_LocalPosition: {x: -3.02, y: 5.432, z: -0.024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 82023290}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &22778085
 BoxCollider:
@@ -169,7 +169,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2.33916, y: 0.39523402, z: 0.39523402}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &22778086
 MeshRenderer:
@@ -190,7 +190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1edb570f182deed4f9482a53141ba92a, type: 2}
+  - {fileID: 2100000, guid: e026142d41fb7724c951b950f93767c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -219,7 +219,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22778083}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -5495902117074765545, guid: 91b8f35a0233ffc428317ba7e37f02e8, type: 3}
 --- !u!114 &22778088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +236,7 @@ MonoBehaviour:
   character: {fileID: 7837154946537704035, guid: 0c69de082027a4447b779081f8e42c28, type: 3}
   ballOfMagnet: {fileID: 4975576088931841321, guid: 600569ac330ab8f4287a50bb14badf82, type: 3}
   magnetised: 0
+  lever: 0
 --- !u!54 &22778089
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -343,8 +344,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.12, y: 5.63, z: 0}
   m_LocalScale: {x: 7, y: 0.3, z: 1.2}
-  m_Children:
-  - {fileID: 22778084}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -602,9 +602,9 @@ GameObject:
   - component: {fileID: 776440301}
   - component: {fileID: 776440304}
   - component: {fileID: 776440303}
-  - component: {fileID: 776440302}
   - component: {fileID: 776440305}
   - component: {fileID: 776440306}
+  - component: {fileID: 776440302}
   m_Layer: 6
   m_Name: Magnet
   m_TagString: Magnet
@@ -620,11 +620,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776440300}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.496, y: -0.66, z: -0.02}
-  m_LocalScale: {x: 0.14, y: 0.63, z: 0.3}
+  m_LocalPosition: {x: 4.988, y: 10.732, z: -0.024}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1808799444}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &776440302
 BoxCollider:
@@ -637,7 +637,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2.33916, y: 0.39523402, z: 0.39523402}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &776440303
 MeshRenderer:
@@ -658,7 +658,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1edb570f182deed4f9482a53141ba92a, type: 2}
+  - {fileID: 2100000, guid: e026142d41fb7724c951b950f93767c5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -687,7 +687,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776440300}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -5495902117074765545, guid: 91b8f35a0233ffc428317ba7e37f02e8, type: 3}
 --- !u!114 &776440305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,6 +704,7 @@ MonoBehaviour:
   character: {fileID: 7837154946537704035, guid: 0c69de082027a4447b779081f8e42c28, type: 3}
   ballOfMagnet: {fileID: 4975576088931841321, guid: 600569ac330ab8f4287a50bb14badf82, type: 3}
   magnetised: 0
+  lever: 0
 --- !u!54 &776440306
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1134,7 +1135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 847784007583885525, guid: 649d4a646f252274189155fe4ab9971c, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 847784007583885525, guid: 649d4a646f252274189155fe4ab9971c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1422,10 +1423,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.46, y: 10.93, z: 0}
   m_LocalScale: {x: 7, y: 0.3, z: 1.2}
-  m_Children:
-  - {fileID: 776440301}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861780204
 GameObject:
