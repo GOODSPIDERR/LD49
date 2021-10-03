@@ -56,7 +56,7 @@ public class CharacterMovement : MonoBehaviour
             rb.isKinematic = false;
             rb.useGravity = true;
             capsuleCollider.enabled = true;
-            //BackToNormal();
+            BackToNormal(); //If you comment this out, it breaks the right click, but the rotation works fine
             headMagnet.transform.localPosition = initialHatPosition;
             headMagnet.transform.localRotation = initialHatRotation;
 
