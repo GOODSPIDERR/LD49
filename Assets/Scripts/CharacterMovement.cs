@@ -6,6 +6,7 @@ using DG.Tweening;
 public class CharacterMovement : MonoBehaviour
 {
     public bool canMove = true;
+    public bool doubleJumped;
     Rigidbody rb;
     public float movementSpeed = 1f, acceleration = 1f;
     float velocity;
@@ -76,7 +77,16 @@ public class CharacterMovement : MonoBehaviour
 
         //Debug.Log(magnetised);
 
+
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded && canMove) Jump();
+
+        //DOUBLE JUMPING SECTION....IF WE NEED TO IMPLEMENT IT
+        if (isGrounded) doubleJumped = false;
+        if (Input.GetKeyDown(KeyCode.Space) && !isGrounded && !doubleJumped)
+        {
+            Jump();
+            doubleJumped = true;
+        }
 
         animator.SetBool("Magnetised", magnetised);
 
@@ -105,6 +115,7 @@ public class CharacterMovement : MonoBehaviour
         rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
         animator.SetTrigger("Jump");
     }
+
 
     public void BackToNormal()
     {

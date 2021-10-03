@@ -269,6 +269,7 @@ MonoBehaviour:
   character: {fileID: 1028630059}
   ballOfMagnet: {fileID: 4975576088931841321, guid: 600569ac330ab8f4287a50bb14badf82, type: 3}
   magnetised: 0
+  lever: 1
 --- !u!54 &22778091
 Rigidbody:
   m_ObjectHideFlags: 0
