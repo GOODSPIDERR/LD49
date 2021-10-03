@@ -23,6 +23,7 @@ public class CharacterMovement : MonoBehaviour
     Vector3 initialPosition, initialHatPosition;
     Quaternion initialRotation, initialHatRotation;
     public Transform head;
+    public Transform otherMagnet;
 
 
     void Start()
@@ -40,25 +41,30 @@ public class CharacterMovement : MonoBehaviour
         if (magnetised)
         {
             canMove = false;
-            headMagnet.transform.SetParent(null);
-            transform.SetParent(headMagnet.transform);
-            rb.isKinematic = true;
-            rb.useGravity = false;
-            capsuleCollider.enabled = false;
-            transform.localPosition = new Vector3(0, 0, 0);
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            Vector3 distance = otherMagnet.position - transform.position;
+            rb.AddForce(distance * 500f / distance.magnitude * Time.deltaTime);
+            rb.AddForce(Input.GetAxisRaw("Horizontal") * 100 * Time.deltaTime, 0, 0);
+            Debug.Log(distance);
+            //transform.rotation = Quaternion.LookRotation(distance, Vector3.left);
+            //headMagnet.transform.SetParent(null);
+            //transform.SetParent(headMagnet.transform);
+            //rb.isKinematic = true;
+            //rb.useGravity = false;
+            //capsuleCollider.enabled = false;
+            //transform.localPosition = new Vector3(0, 0, 0);
+            //transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
         else
         {
             canMove = true;
-            transform.SetParent(null);
-            headMagnet.transform.SetParent(head);
-            rb.isKinematic = false;
-            rb.useGravity = true;
-            capsuleCollider.enabled = true;
-            BackToNormal(); //If you comment this out, it breaks the right click, but the rotation works fine
-            headMagnet.transform.localPosition = initialHatPosition;
-            headMagnet.transform.localRotation = initialHatRotation;
+            //transform.SetParent(null);
+            //headMagnet.transform.SetParent(head);
+            //rb.isKinematic = false;
+            //rb.useGravity = true;
+            //capsuleCollider.enabled = true;
+            //BackToNormal(); //If you comment this out, it breaks the right click, but the rotation works fine
+            //headMagnet.transform.localPosition = initialHatPosition;
+            //headMagnet.transform.localRotation = initialHatRotation;
 
         }
 
@@ -68,7 +74,7 @@ public class CharacterMovement : MonoBehaviour
 
         isGrounded = Physics.CheckSphere(groundCheck.position, 0.25f, groundLayer);
 
-        Debug.Log(magnetised);
+        //Debug.Log(magnetised);
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded && canMove) Jump();
 
@@ -90,8 +96,8 @@ public class CharacterMovement : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(movementVector.x));
         //transform.rotation = Quaternion.LookRotation(movementVector);
 
-        if (movementVector.x > 0) transform.rotation = Quaternion.Euler(0, 90f, 0);
-        else if (movementVector.x < 0) transform.rotation = Quaternion.Euler(0, -90f, 0);
+        if (movementVector.x > 0) transform.rotation = Quaternion.Euler(transform.rotation.x, 90f, transform.rotation.z);
+        else if (movementVector.x < 0) transform.rotation = Quaternion.Euler(transform.rotation.x, -90f, transform.rotation.z);
     }
 
     public void Jump()
