@@ -20,6 +20,8 @@ public class MagnetMoment : MonoBehaviour
     {
         hatMagnet = GameObject.FindGameObjectWithTag("Hat").GetComponent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
+        character = GameObject.FindGameObjectWithTag("Player");
+        characterMovement = character.GetComponent<CharacterMovement>();
         initialPosition = transform.position;
         initialRotation = transform.rotation;
     }

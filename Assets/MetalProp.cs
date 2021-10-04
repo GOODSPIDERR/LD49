@@ -9,7 +9,7 @@ public class MetalProp : MonoBehaviour
     Transform hatMagnet;
     Rigidbody rb;
     bool magnetised, ballMagnetised;
-    Transform targetMagnet;
+    public Transform targetMagnet;
 
     void Start()
     {
@@ -26,7 +26,6 @@ public class MetalProp : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && hit.collider.tag == "Prop")
             {
                 magnetised = true;
-
             }
 
         }
@@ -53,7 +52,7 @@ public class MetalProp : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            magnetised = true;
+            ballMagnetised = true;
             targetMagnet = other.transform;
             //rb.isKinematic = false;
             //rb.useGravity = true;
@@ -65,7 +64,7 @@ public class MetalProp : MonoBehaviour
     {
         if (other.CompareTag("Ball"))
         {
-            magnetised = false;
+            ballMagnetised = false;
             //rb.isKinematic = true;
             //rb.useGravity = false;
             //Recovery();
