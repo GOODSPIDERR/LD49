@@ -779,7 +779,7 @@ MonoBehaviour:
   magnetLayer:
     serializedVersion: 2
     m_Bits: 512
-  jumpForce: 5
+  jumpForce: 7
   graphics: {fileID: 7837154946568531622}
   magnetised: 0
   headMagnet: {fileID: 5168154941887526571}

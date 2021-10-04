@@ -33,8 +33,8 @@ public class MainMenuScript : MonoBehaviour
 
     private void Update() //Tilts the UI according to the mouse position
     {
-        Vector2 mouseOffset = new Vector2(Screen.width / 2 - Input.mousePosition.x, Screen.height / 2 - Input.mousePosition.y);
+        //Vector2 mouseOffset = new Vector2(Screen.width / 2 - Input.mousePosition.x, Screen.height / 2 - Input.mousePosition.y);
 
-        transform.localRotation = Quaternion.Euler(-mouseOffset.y * 0.01f, mouseOffset.x * 0.01f, 0);
+        //transform.localRotation = Quaternion.Euler(-mouseOffset.y * 0.01f, mouseOffset.x * 0.01f, 0);
     }
 }
