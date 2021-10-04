@@ -112,7 +112,7 @@ public class CharacterMovement : MonoBehaviour
 
     public void Jump()
     {
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.VelocityChange);
+        rb.velocity = new Vector3(rb.velocity.x, jumpForce, 0);
         animator.SetTrigger("Jump");
     }
 
